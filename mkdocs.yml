@@ -1,0 +1,32 @@
+site_name: 5GMETA 
+
+nav:
+  - User profiles definition: actors_description.md
+    
+  - CAM application developer:
+    - Getting Started: getting-started.md
+    - Consuming Guide: consuming-guide.md
+    - Dataset Guide: datasets.md
+    - Producing Events Guide: producing_events_guide.md
+    - Data Processing Tutorials: tutorial-processing.md
+  
+  - Sernsors and devices provider:
+    - Getting Started: getting-started-sensor-provider.md
+    - Using API for sensors and devices with AMQP: activemq-example.md
+    - Sending C-ITS data guide: cits-sender-message-data-broker.md
+    - Sending images guide: image-sender-message-data-broker.md
+    - Sending video streams guide: video-stream-broker.md
+    - Receving Events guide: receiving_events_guide.md
+  
+  - Infrastructure provider:
+    - Getting Started: getting-started-infrastructure-provider.md
+    - Instanciating a MEC stack: edge-deployment.md
+    - Instanciating low latency data services: low-latency-services.md
+    
+  - Additional resources:
+    - Advcanced description: processing_description.md
+    - Message data broker: message-databroker.md
+    - Stream data gateway: stream-datagateway.md
+    - Additional examples: stream-example.md
+    - About: about.md
+theme: readthedocs
