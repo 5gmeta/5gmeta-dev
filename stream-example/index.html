@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Additional examples - 5GMETA</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Additional examples";
+        var mkdocs_page_input_path = "stream-example.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> 5GMETA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../actors_description/">User profiles definition</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CAM application developer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../consuming-guide/">Consuming Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../datasets/">Dataset Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../producing_events_guide/">Producing Events Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-processing/">Data Processing Tutorials</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sernsors and devices provider</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started-sensor-provider/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../activemq-example/">Using API for sensors and devices with AMQP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cits-sender-message-data-broker/">Sending C-ITS data guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image-sender-message-data-broker/">Sending images guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-stream-broker/">Sending video streams guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../receiving_events_guide/">Receving Events guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Infrastructure provider</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started-infrastructure-provider/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edge-deployment/">Instanciating a MEC stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../low-latency-services/">Instanciating low latency data services</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional resources</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../processing_description/">Advcanced description</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../message-databroker/">Message data broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stream-datagateway/">Stream data gateway</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Additional examples</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#consumer-instructions">Consumer instructions</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">5GMETA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Additional resources</li>
+      <li class="breadcrumb-item active">Additional examples</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="consumer-and-event-producer-examples">Consumer and Event Producer Examples</h1>
+<p>In this section, we walkthrough the Kafka consumer examples. Three sample consumer examples are provided within the <a href="https://github.com/5gmeta/stream-data-gateway/tree/main/examples/consumer">repo</a> for cits, video and image datatypes respectively.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="consumer-instructions"><em>Consumer instructions</em></h3>
+<ul>
+<li>
+<p>Use <a href="https://github.com/5gmeta/stream-data-gateway/tree/main/utils/platform-client">platform-client</a> to receive appropriate topics and IPs and ports to be used.</p>
+</li>
+<li>
+<p>Select the suitable consumer as per the produced data and use as follows: </p>
+</li>
+</ul>
+<pre><code>python3 cits-consumer.py topic platformaddress bootstrap_port registry_port
+
+</code></pre>
+<p>or</p>
+<pre><code>python3 video-consumer.py platformaddress bootstrap_port topic dataflow_id
+
+</code></pre>
+<h1 id="avro-events-producer-examples">Avro events producer examples</h1>
+<p>This folder contains avro producer example to produce events.</p>
+<h2 id="usage_1">Usage</h2>
+<ul>
+<li>Avro Producer config format to produce an event with avro serializer:</li>
+</ul>
+<pre><code class="language-python">schema_registry_client = SchemaRegistryClient(schema_registry_conf)
+
+avro_serializer = AvroSerializer( schema_registry_client, 
+                                  schema_str,
+                                  msg_to_dict )
+
+producer_conf = {'bootstrap.servers': args.bootstrap_servers,
+                  'key.serializer': StringSerializer('utf_8'),
+                  'value.serializer': avro_serializer}
+
+producer = SerializingProducer(producer_conf)
+.
+.
+.
+producer.poll(0.0)
+</code></pre>
+<p>Usage is: </p>
+<pre><code>python3 avro_producer_events.py -b bootstrap_ip:9092 -s http://schema_ip:8081 -t topic
+</code></pre>
+<h1 id="more-examples">More examples</h1>
+<p>There are other such examples that are complete and don't need to use external util to get topic and ip/port to access the system.</p>
+<ul>
+<li><a href="https://github.com/5gmeta/stream-data-gateway/blob/main/examples/consumer/cits/cits-kafka-consumer.py">cits/cits-kafka-consumer.py</a></li>
+<li><a href="https://github.com/5gmeta/stream-data-gateway/blob/main/examples/consumer/image/image-kafka-consumer.py">image/image-kafka-consumer.py</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../stream-datagateway/" class="btn btn-neutral float-left" title="Stream data gateway"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../stream-datagateway/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

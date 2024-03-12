@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Producing Events Guide - 5GMETA</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Producing Events Guide";
+        var mkdocs_page_input_path = "producing_events_guide.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> 5GMETA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../actors_description/">User profiles definition</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CAM application developer</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../consuming-guide/">Consuming Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../datasets/">Dataset Guide</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Producing Events Guide</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#platform-client-helper-application">Platform-client helper application</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#client-usage">Client usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-processing/">Data Processing Tutorials</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sernsors and devices provider</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started-sensor-provider/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../activemq-example/">Using API for sensors and devices with AMQP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cits-sender-message-data-broker/">Sending C-ITS data guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image-sender-message-data-broker/">Sending images guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-stream-broker/">Sending video streams guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../receiving_events_guide/">Receving Events guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Infrastructure provider</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started-infrastructure-provider/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edge-deployment/">Instanciating a MEC stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../low-latency-services/">Instanciating low latency data services</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../processing_description/">Advcanced description</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../message-databroker/">Message data broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stream-datagateway/">Stream data gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stream-example/">Additional examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">5GMETA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">CAM application developer</li>
+      <li class="breadcrumb-item active">Producing Events Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="guide-to-produce-an-event">Guide to produce an event</h1>
+<h2 id="platform-client-helper-application">Platform-client helper application</h2>
+<p>There is a guided applicaction that will help you to get the apropriate parameters from 5GMETA platform to get the data you need.
+You can execute it by downloading all content from folder: </p>
+<ul>
+<li><a href="https://github.com/5gmeta/5gmeta-dev/tree/main/utils/platform-client/">Platform client helper application</a></li>
+</ul>
+<p>Once you have donwload that software you can run it by executing:</p>
+<pre><code>$ python3 client.py
+</code></pre>
+<p>in your command line.</p>
+<h3 id="client-usage">Client usage</h3>
+<p>Once you have executed the previous command you will be prompted for:</p>
+<ul>
+<li>5GMETA username</li>
+<li>5GMETA password</li>
+<li>Produce or Consume</li>
+<li>Tile</li>
+</ul>
+<p>After entering your username/password, client will ask you if you want to:
+- Consume data from 5GMETA platform
+- Produce an event in a vehicle connected to 5GMETA platform</p>
+<p>In our case we have decided to produce an event, so we push e. </p>
+<p>Inmediately client will prompt you which <a href="#tile">tile</a> to push an event to.
+<img alt="Client prompt" src="../images/client_events.png" /></p>
+<p>The Client will prompt out a topic where you can push an event, copy paste it inside the config file
+<img alt="Config File" src="../images/config_file.png" /></p>
+<p>Execute in your terminal indicating the MESSAGE (EVENT) you want to push to 5GMETA platform as follow:</p>
+<pre><code>$ python3 kafka-even-sender.py MESSAGE
+</code></pre>
+<p>It will prompt you with the success of sending your event to 5GMETA platform with your indicated <strong><em>TOPIC</em></strong> from the client.
+<img alt="Kafka Event Sender" src="../images/events_producer_success.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../datasets/" class="btn btn-neutral float-left" title="Dataset Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tutorial-processing/" class="btn btn-neutral float-right" title="Data Processing Tutorials">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../datasets/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tutorial-processing/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

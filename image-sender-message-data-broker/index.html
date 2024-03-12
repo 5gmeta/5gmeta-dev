@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Sending images guide - 5GMETA</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Sending images guide";
+        var mkdocs_page_input_path = "image-sender-message-data-broker.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> 5GMETA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../actors_description/">User profiles definition</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CAM application developer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../consuming-guide/">Consuming Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../datasets/">Dataset Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../producing_events_guide/">Producing Events Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-processing/">Data Processing Tutorials</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sernsors and devices provider</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started-sensor-provider/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../activemq-example/">Using API for sensors and devices with AMQP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cits-sender-message-data-broker/">Sending C-ITS data guide</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Sending images guide</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-stream-broker/">Sending video streams guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../receiving_events_guide/">Receving Events guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Infrastructure provider</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started-infrastructure-provider/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edge-deployment/">Instanciating a MEC stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../low-latency-services/">Instanciating low latency data services</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../processing_description/">Advcanced description</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../message-databroker/">Message data broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stream-datagateway/">Stream data gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stream-example/">Additional examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">5GMETA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Sernsors and devices provider</li>
+      <li class="breadcrumb-item active">Sending images guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>In this page, we introduce examples which can be run for image data type.</p>
+<h2 id="steps-to-run-examples">Steps to run examples</h2>
+<p>The examples can be found in the folder <a href="https://github.com/5gmeta/5gmeta-dev/tree/main/examples/message-data-broker/image_sender_python">examples/message-data-broker/image_sender_python</a>.</p>
+<p>Similarly to the <a href="../cits-sender-message-data-broker/">C-ITS sender example</a>, you need to configure the address of the data broker.</p>
+<p>Then, in one terminal window run:</p>
+<pre><code>python3 sender.py
+
+or
+
+python3 sender_with_sd_database_support.py
+</code></pre>
+<p>Depending if your are running your S&amp;D connected to an database or not</p>
+<p>You can put the images you are going to send in sample_images folder.</p>
+<p>If you want to do some debugging and check if your messages are being sent run in another terminal to receive messages (you have to modify address.py in order to put the appropriate ip, port and topic given by your message broker) :</p>
+<pre><code>python receiver.py
+</code></pre>
+<p>Use the ActiveMQ admin web page to check Messages Enqueued / Dequeued counts match. </p>
+<p>You can control which AMQP server the examples try to connect to and the messages they send by changing the values in config.py</p>
+<p>You have to take into account that any modification made on dataflowmetadata must be applied too into the content.py file in order to generate the appropriate content.</p>
+<h2 id="other-resources">Other resources</h2>
+<p><strong><em>The initial example for this client is at the <a href="https://github.com/apache/activemq/tree/main/assembly/src/release/examples/amqp/python">link</a></em></strong></p>
+<pre><code>- *https://qpid.apache.org/releases/qpid-proton-0.36.0/proton/python/docs/tutorial.html*
+- *https://access.redhat.com/documentation/en-us/red_hat_amq/6.3/html/client_connectivity_guide/amqppython*
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../cits-sender-message-data-broker/" class="btn btn-neutral float-left" title="Sending C-ITS data guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../video-stream-broker/" class="btn btn-neutral float-right" title="Sending video streams guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../cits-sender-message-data-broker/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../video-stream-broker/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

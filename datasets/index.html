@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Dataset Guide - 5GMETA</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Dataset Guide";
+        var mkdocs_page_input_path = "datasets.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> 5GMETA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../actors_description/">User profiles definition</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CAM application developer</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../consuming-guide/">Consuming Guide</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Dataset Guide</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../producing_events_guide/">Producing Events Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-processing/">Data Processing Tutorials</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sernsors and devices provider</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started-sensor-provider/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../activemq-example/">Using API for sensors and devices with AMQP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cits-sender-message-data-broker/">Sending C-ITS data guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image-sender-message-data-broker/">Sending images guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-stream-broker/">Sending video streams guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../receiving_events_guide/">Receving Events guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Infrastructure provider</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started-infrastructure-provider/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edge-deployment/">Instanciating a MEC stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../low-latency-services/">Instanciating low latency data services</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../processing_description/">Advcanced description</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../message-databroker/">Message data broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stream-datagateway/">Stream data gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stream-example/">Additional examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">5GMETA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">CAM application developer</li>
+      <li class="breadcrumb-item active">Dataset Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sample-dataset-to-test-a-cam-application">Sample dataset to test a CAM application</h1>
+<p>You will find below a list of datasets which can be used to help in the development of a CAM application.</p>
+<table>
+<thead>
+<tr>
+<th>5GMETA DATA TYPE</th>
+<th>DESCRIPTION</th>
+<th>TILE</th>
+<th>SAMPLE</th>
+<th>ReadMe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C-ITS Simulation</td>
+<td>Cooperative Awareness Messages (position, heading, speed, acceleration, etc...) from simulated vehicles</td>
+<td>anywhere/worldwide</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/image-sample-links-simulator-ui.jpg">WebApp UI</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/unimore-cam-description.md">README</a></td>
+</tr>
+<tr>
+<td>C-ITS</td>
+<td>Position, heading, speed and acceleration from vehicles  in Donostia (Spain)</td>
+<td>0313331232</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/cits-vicomtech-donostia.json">cits-vicomtech-donostia.json</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/vicomtech_cam_description.md">README</a></td>
+</tr>
+<tr>
+<td>C-ITS</td>
+<td>Position, heading, speed and acceleration from vehicles  in Toulouse (France)</td>
+<td>120222021</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/cits-vicomtech-toulouse.json">cits-vicomtech-toulouse.json</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/vicomtech_cam_description.md">README</a></td>
+</tr>
+<tr>
+<td>C-ITS</td>
+<td>Category, Position, orientation, speed and cam_id, object_id from vehicles, person, bycicle..etc  in MODENA (Italy)</td>
+<td>1202231113220102</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/cits-unimore-modena-masa.json">cits-unimore-modena-masa.json</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/unimore-masa-description.md">README</a></td>
+</tr>
+<tr>
+<td>C-ITS</td>
+<td>Camera_id, space_id ,space position, Occupied Or Empty, from Parking Lots in MODENA (Italy)</td>
+<td>1202231113220102</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/cits-unimore-modena-pld.json">cits-unimore-modena-pld.json</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/unimore-pld-description.md">README</a></td>
+</tr>
+<tr>
+<td>C-ITS</td>
+<td>GPS Position, dms_level, dms_trigger from Driver monitoring system in MODENA (Italy)</td>
+<td>1202231113220102</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/cits-unimore-modena-dms.json">cits-unimore-modena-dms.json</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/unimore-dms-description.md">README</a></td>
+</tr>
+<tr>
+<td>C-ITS</td>
+<td>Position, heading, speed and acceleration from vehicles in MODENA (Italy)</td>
+<td>1202231113220102</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/cits-unimore-modena-cam.json">cits-unimore-modena-cam.json</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/unimore-cam-description.md">README</a></td>
+</tr>
+<tr>
+<td>image</td>
+<td>jpg from   Donostia (Spain)</td>
+<td>0313331232</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/image-sample-vicomtech-donostia.jpg">image-sample-vicomtech-donostia.jpg</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/vicomtech_jpg_description.md">README</a></td>
+</tr>
+<tr>
+<td>image</td>
+<td>jpg from   Toulouse (France)</td>
+<td>120222021</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/image-sample-vicomtech-toulouse.jpg">image-sample-vicomtech-toulouse.jpg</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/vicomtech_jpg_description.md">README</a></td>
+</tr>
+<tr>
+<td>C-ITS</td>
+<td>Position, heading, speed and acceleration from vehicles  in Versailles (France)</td>
+<td>1202200101311</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/cits-versailles_area-cam.json">cits-versailles_area-cam.json</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/versailles_cam_description.md">README</a></td>
+</tr>
+<tr>
+<td>C-ITS</td>
+<td>Status of traffic light in Versailles (France)</td>
+<td>1202200101311</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/cits-versailles_area-spat.json">cits-versailles_area-spat.json</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/versailles_spat_description.md">README</a></td>
+</tr>
+<tr>
+<td>C-ITS</td>
+<td>Parking area occupancy  in Versailles (France)</td>
+<td>1202200101311</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/cits-versailles_area-pam.json">cits-versailles_area-pam.json</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/versailles_pam_description.md">README</a></td>
+</tr>
+<tr>
+<td>C-ITS</td>
+<td>Traffic counting from with 2 metric (Throughput, Occupation rate) with 5 sensors in Versailles (France)</td>
+<td>1202200101311</td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/datasets/traffic_sensors_samples.json">traffic_sensors_samples.json</a></td>
+<td><a href="https://github.com/5gmeta/5gmeta-dev/blob/main/docs/datasets-description/versailles_traffic_sensors_description.md">README</a></td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../consuming-guide/" class="btn btn-neutral float-left" title="Consuming Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../producing_events_guide/" class="btn btn-neutral float-right" title="Producing Events Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../consuming-guide/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../producing_events_guide/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

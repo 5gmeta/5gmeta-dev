@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Data Processing Tutorials - 5GMETA</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Data Processing Tutorials";
+        var mkdocs_page_input_path = "tutorial-processing.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> 5GMETA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../actors_description/">User profiles definition</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CAM application developer</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../consuming-guide/">Consuming Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../datasets/">Dataset Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../producing_events_guide/">Producing Events Guide</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Data Processing Tutorials</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-1-parallel-processing-of-data-consumed">Example 1: Parallel processing of data consumed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-2-collection-of-location-data-with-map-display">Example 2: Collection of location data with map display</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-3-produce-a-feedback-event-from-consumption-of-data">Example 3: Produce a feedback event from consumption of data</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sernsors and devices provider</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started-sensor-provider/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../activemq-example/">Using API for sensors and devices with AMQP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cits-sender-message-data-broker/">Sending C-ITS data guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image-sender-message-data-broker/">Sending images guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video-stream-broker/">Sending video streams guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../receiving_events_guide/">Receving Events guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Infrastructure provider</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started-infrastructure-provider/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edge-deployment/">Instanciating a MEC stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../low-latency-services/">Instanciating low latency data services</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../processing_description/">Advcanced description</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../message-databroker/">Message data broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stream-datagateway/">Stream data gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stream-example/">Additional examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">5GMETA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">CAM application developer</li>
+      <li class="breadcrumb-item active">Data Processing Tutorials</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tutorial-for-processing-data-with-5gmeta-platform">Tutorial for processing data with 5GMETA platform</h1>
+<p>This page introduces basic example for the processing of data gathered from 5GMETA platform.
+These tutorials can be found in <a href="https://github.com/5gmeta/5gmeta-dev/tree/main/examples/tutorials">examples/tutorials</a> directory.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>python3</li>
+<li>matplotlib (pip install matplotlib)</li>
+<li>folium (pip install folium)</li>
+</ul>
+<p>Also find easy installation for all the required packages with <a href="https://github.com/5gmeta/5gmeta-dev/blob/main/examples/tutorials/requirements.txt">requirements.txt</a> file (Be careful of your environment compatibility):</p>
+<ul>
+<li><code>pip3 install -r examples/tutorials/requirements.txt</code></li>
+</ul>
+<h2 id="example-1-parallel-processing-of-data-consumed">Example 1: Parallel processing of data consumed</h2>
+<p>In this example, we show how data can be consumed in a dedicated thread and a specific value (here, the speed of a vehicle) can be displayed in a GUI</p>
+<p>First, you need to run the client platform (client_example1.py) to obtain the access to the data</p>
+<p><code>python client_example1.py</code></p>
+<p>Upon the request, enter your credentials: (username, password)</p>
+<p><img alt="" src="../images/example1_credentials.PNG" /></p>
+<p>Once you have successfully registered, you can obtain a topic from which you can consume data.</p>
+<p><img alt="" src="../images/example1_python_cmd.png" /></p>
+<p>Please to not close the platform client script.</p>
+<p>Then, open a new terminal and run the script example1_oscilloscope.py using the command prompted in the platform client</p>
+<p><code>python example1_oscilloscope.py topic platformaddress bootstrap_port registry_port</code></p>
+<p>You will start receive data and extract speed value to show in live in a GUI</p>
+<p><img alt="" src="../images/speed_display.PNG" />
+<img alt="" src="../images/example1_speed_example.png" /></p>
+<h2 id="example-2-collection-of-location-data-with-map-display">Example 2: Collection of location data with map display</h2>
+<p>In this example, we show how data can be collected from a given topic and location information is extracted and displayed using openstreetmap</p>
+<p>First, you need to run the client platform (client_example2.py) to obtain the access to the data</p>
+<p><code>python client_example2.py</code></p>
+<p>Upon the request, enter your credentials: (username, password)</p>
+<p><img alt="" src="../images/example2_credentials.PNG" /></p>
+<p>Once you have successfully registered, you can obtain a topic from which you can consume data.</p>
+<p><img alt="" src="../images/example2_python_cmd.png" /></p>
+<p>Please to not close the platform client script.</p>
+<p>Then, open a new terminal and run the script example2_displaymap.py using the command prompted in the platform client</p>
+<p><code>python example2_displaymap.py topic platformaddress bootstrap_port registry_port</code></p>
+<p>You will start collecting a number of samples (e.g. 20) and store the location values in a dedicated table.
+ At the end of the processing, a map file is generated to display the received location values. You can load the map file, 5GMETADataMap,html, in your browser to show the location values as illustrated in the figure below.</p>
+<p><img alt="" src="../images/display_browser.PNG" /></p>
+<h2 id="example-3-produce-a-feedback-event-from-consumption-of-data">Example 3: Produce a feedback event from consumption of data</h2>
+<p>In this example, we show how a feedback event can be generated to a specific tile after the processing of data consumed from 5GMETA platform.</p>
+<p>First, you need to run the client platform (client_example3.py) to obtain the access to the data</p>
+<p><code>python client_example3.py</code></p>
+<p>Upon the request, enter your credentials: (username, password)</p>
+<p><img alt="" src="../images/example3_credentials.PNG" /></p>
+<p>Once you have successfully registered, you will obtain the access to 2 topics: 1 for the consumption of data and 1 for the generation of an event feedback.</p>
+<p><img alt="" src="../images/example3_python_cmd.png" /></p>
+<p>Please to not close the platform client script.</p>
+<p>Then, open a new terminal and run the script example3_eventfeedback.py using the command prompted in the platform client</p>
+<p><code>python example3_eventfeedback.py consume_topic produce_topic platformaddress bootstrap_port registry_port</code></p>
+<p>You will start consuming data using the consume topic (e.g. 5). After the consumption of a predefined number of message, an event is produced on the 5GMETA platform as illustrated in the figure below.</p>
+<p><img alt="" src="../images/exemple3_data.PNG" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../producing_events_guide/" class="btn btn-neutral float-left" title="Producing Events Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../getting-started-sensor-provider/" class="btn btn-neutral float-right" title="Getting Started">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../producing_events_guide/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../getting-started-sensor-provider/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
